@@ -8,7 +8,7 @@ Synthetic data for Aircraft detection and recognition
 ## Train
 To train SinGAN model on your background satellite images, crop the image to get 512 × 512 pixels images . Put the desired training images under Input/Images, and run
 
-`python main_train.py --input_name <input_file_name>`
+``python main_train.py --input_name <input_file_name>``
 
 To run this code on a cpu machine, specify 
 `--not_cuda when calling main_train.py`
