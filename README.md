@@ -2,6 +2,12 @@
 Synthetic data for Aircraft detection and recognition
 
 # Code
+Create an environmnet and activate it
+
+`conda create -n hor python=3.9`
+ `conda activate hor`
+
+
 ## Install dependencies
 `python -m pip install -r requirements.txt`
 
@@ -18,6 +24,11 @@ To harmonize a pasted aircraft into an image (See Fig. 6 in our paper), please f
 ``python harmonization.py --input_name <training_image_file_name> --ref_name <naively_pasted_reference_image_file_name> --harmonization_start_scale <scale to inject>``
 
 Please note that different injection scale will produce different harmonization effects. The coarsest injection scale equals 1.
+
+## Test
+To test and generate the harmonized SyntAR images against all provided backgrounds and for all the aircraft patches , we have a script which is automated method to pick backgrounds one by one from the backgrounds folder , place objects one by one on the backgrounds where the user clicks on the background and generates the naively pasted aircraft images for the backgrounds inside "generated" folder. Then the scrip automatically runs the harmonization pipeline to create SyntAR images for all the generated images and save them inside "Output" folder.
+Run this cmd 
+`python `
 
 
 ## User Study
