@@ -15,7 +15,7 @@ To run this code on a cpu machine, specify
 
 To harmonize a pasted aircraft into an image (See Fig. 6 in our paper), please first train SinGAN model on the desired background satellite image (as described above), then save the naively pasted reference image and it's binary mask under "Input/Harmonization" (see saved images for an example). Run the command
 
-``python harmonization.py --input_name <training_image_file_name> --ref_name <naively_pasted_reference_image_file_name> --harmonization_start_scale <scale to inject>
+``python harmonization.py --input_name <training_image_file_name> --ref_name <naively_pasted_reference_image_file_name> --harmonization_start_scale <scale to inject>``
 
 Please note that different injection scale will produce different harmonization effects. The coarsest injection scale equals 1.
 
