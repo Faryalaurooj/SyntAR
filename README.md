@@ -5,6 +5,8 @@ Synthetic data for Aircraft detection and recognition
 Create an environmnet and activate it
 
 `conda create -n hor python=3.9`
+
+
  `conda activate hor`
 
 
