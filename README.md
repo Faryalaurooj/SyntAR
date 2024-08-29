@@ -1,5 +1,5 @@
 # SyntAR
-Synthetic data for Aircraft detection and recognition
+Synthetic data generation for Aircraft detection and recognition 
 
 # Code
 Create an environmnet and activate it
