@@ -9,12 +9,15 @@ Create an environmnet and activate it
 
  `conda activate hor`
 
-
 ## Install dependencies
 `python -m pip install -r requirements.txt`
 
 ## Train
-To train SinGAN model on your background satellite images, crop the image to get 512 × 512 pixels images . Put the desired training images under Input/Images, and run
+To train SinGAN model on your background satellite images, crop the image to get 512 × 512 pixels images . For generating the crops , use this script
+
+``python crop.py ``
+
+Put the desired background training images under Input/Images, and run
 
 ``python main_train.py --input_name <input_file_name>``
 
@@ -32,11 +35,9 @@ To test and generate the harmonized SyntAR images against all provided backgroun
 
 Run this cmd 
 
-`python ScriptForMaskingAllbg_Finalized.py `
+``python ScriptForMaskingAllbg_Finalized.py ``
 
-
-choose directory box opens , select folder named data with double click, aall_objects double click, ok. THen first background will open , click wherever you want to place aircraft and enter. THe harmonization code will start for all objects on that background one by one. 
-
+choose directory box opens , select folder named data with double click, aall_objects double click, ok. Then first background will open , click wherever you want to place aircraft and enter. The harmonization code will start for all objects on that background one by one. 
 
 
 ## User Study
