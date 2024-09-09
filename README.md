@@ -13,13 +13,16 @@ Create an environmnet and activate it
 `python -m pip install -r requirements.txt`
 
 ## Train
+### Training on background
+
 To train SinGAN model on your background satellite images, crop the image to get 512 × 512 pixels images . For generating the crops , use this script
 
 ``python crop.py ``
 
-Put the desired background training images under Input/Images, and run
+Put the desired background training images crops under Backgroundsdataset folder, and run
 
-``python main_train.py --input_name <input_file_name>``
+``python train_all.py ``
+This will call other files "main_train.py" and from there it will run the harmonization command for all the images one by one for all the scale 0 to 7 
 
 To run this code on a cpu machine, specify 
 `--not_cuda when calling main_train.py`
