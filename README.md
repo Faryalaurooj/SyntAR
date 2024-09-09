@@ -22,10 +22,13 @@ To train SinGAN model on your background satellite images, crop the image to get
 Put the desired background training images crops under Backgroundsdataset folder, and run
 
 ``python train_all.py ``
+
 This will call other files "main_train.py" and from there it will run the harmonization command for all the images one by one for all the scale 0 to 7 
 
 To run this code on a cpu machine, specify 
 `--not_cuda when calling main_train.py`
+
+### Harmonize the synthetic patches on trained backgrounds
 
 To harmonize a pasted aircraft into an image (See Fig. 6 in our paper), please first train SinGAN model on the desired background satellite image (as described above), then save the naively pasted reference image and it's binary mask under "Input/Harmonization" (see saved images for an example). Run the command
 
