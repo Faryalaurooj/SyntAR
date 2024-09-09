@@ -28,6 +28,67 @@ This will call other files "main_train.py" and from there it will run the harmon
 To run this code on a cpu machine, specify 
 `--not_cuda when calling main_train.py`
 
+
+This is what runs with this command on terminal :
+
+Harmonization Command :  python main_train.py --input_name slice_langleyairbase_x7247_y2386.png
+Random Seed:  8158
+GeneratorConcatSkip2CleanAdd(
+  (head): ConvBlock(
+    (conv): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1))
+    (norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (LeakyRelu): LeakyReLU(negative_slope=0.2)
+  )
+  (body): Sequential(
+    (block1): ConvBlock(
+      (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+      (norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (LeakyRelu): LeakyReLU(negative_slope=0.2)
+    )
+    (block2): ConvBlock(
+      (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+      (norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (LeakyRelu): LeakyReLU(negative_slope=0.2)
+    )
+    (block3): ConvBlock(
+      (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+      (norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (LeakyRelu): LeakyReLU(negative_slope=0.2)
+    )
+  )
+  (tail): Sequential(
+    (0): Conv2d(32, 3, kernel_size=(3, 3), stride=(1, 1))
+    (1): Tanh()
+  )
+)
+WDiscriminator(
+  (head): ConvBlock(
+    (conv): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1))
+    (norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (LeakyRelu): LeakyReLU(negative_slope=0.2)
+  )
+  (body): Sequential(
+    (block1): ConvBlock(
+      (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+      (norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (LeakyRelu): LeakyReLU(negative_slope=0.2)
+    )
+    (block2): ConvBlock(
+      (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+      (norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (LeakyRelu): LeakyReLU(negative_slope=0.2)
+    )
+    (block3): ConvBlock(
+      (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+      (norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (LeakyRelu): LeakyReLU(negative_slope=0.2)
+    )
+  )
+  (tail): Conv2d(32, 1, kernel_size=(3, 3), stride=(1, 1))
+)
+
+
+
 ### Harmonize the synthetic patches on trained backgrounds
 
 To harmonize a pasted aircraft into an image (See Fig. 6 in our paper), please first train SinGAN model on the desired background satellite image (as described above), then save the naively pasted reference image and it's binary mask under "Input/Harmonization" (see saved images for an example). Run the command
