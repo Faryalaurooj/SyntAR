@@ -7,8 +7,7 @@ import numpy as np
 cropping_list = []
 DATASET_DIR = './All_images' # Folder 1
 saved_folder_path='crops_images'
-#saved_folder_path='NE'
-# DATASET_DIR = './SIDS_India_New_2nd_Half/' # Folder 2
+
 
 IMG_EXTENSION = '.tif'
 
