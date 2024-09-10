@@ -93,7 +93,7 @@ WDiscriminator(
 
 To harmonize a pasted aircraft into an image (See Fig. 6 in our paper), please first train SinGAN model on the desired background satellite image (as described above), we run this command 
 
-`` python ScriptForMaskingAllbg_Finalized.py ''
+``python ScriptForMaskingAllbg_Finalized.py``
 
 when we run this command dialog box will open , we select data then all_objects . It contains patches of all aircraft that we want to paste on our background. we click ok. Then the first background image will open and we click anywhere on the image and press enter. The harmonization code will now run and it will generate naively  pasted aircraft image and mask that i will used for harmonization. THese will be saved inside folder Generated/ 
 
