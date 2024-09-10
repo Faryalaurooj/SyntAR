@@ -91,11 +91,19 @@ WDiscriminator(
 
 ### Harmonize the synthetic patches on trained backgrounds
 
-To harmonize a pasted aircraft into an image (See Fig. 6 in our paper), please first train SinGAN model on the desired background satellite image (as described above), then save the naively pasted reference image and it's binary mask under "Input/Harmonization" (see saved images for an example). Run the command
+To harmonize a pasted aircraft into an image (See Fig. 6 in our paper), please first train SinGAN model on the desired background satellite image (as described above), we run this command 
+
+`` python ScriptForMaskingAllbg_Finalized.py ''
+
+when we run this command dialog box will open , we select data then all_objects . It contains patches of all aircraft that we want to paste on our background. we click ok. Then the first background image will open and we click anywhere on the image and press enter. The harmonization code will now run and it will generate naively  pasted aircraft image and mask that i will used for harmonization. THese will be saved inside folder Generated/ 
+
+Inside harmonization command there is one provision for scale of injection: 
 
 ``python harmonization.py --input_name <training_image_file_name> --ref_name <naively_pasted_reference_image_file_name> --harmonization_start_scale <scale to inject>``
 
 Please note that different injection scale will produce different harmonization effects. The coarsest injection scale equals 1.
+
+After harmonization the images are automatically saved inside Output/Harmonization folder
 
 ## Test
 To test and generate the harmonized SyntAR images against all provided backgrounds and for all the aircraft patches , we have a script which is automated method to pick backgrounds one by one from the backgrounds folder , place objects one by one on the backgrounds where the user clicks on the background and generates the naively pasted aircraft images for the backgrounds inside "generated" folder. Then the scrip automatically runs the harmonization pipeline to create SyntAR images for all the generated images and save them inside "Output" folder.
