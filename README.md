@@ -105,6 +105,17 @@ Please note that different injection scale will produce different harmonization 
 
 After harmonization the images are automatically saved inside Output/Harmonization folder
 
+
+when we run this code , following will occur 
+
+(hor) faryal@faryal-pc:~/Harmonization_code_saud/singan_testing/singan_testing$ python ScriptForMaskingAllbg_Finalized.py
+(400, 400, 3)
+------------------------------------------------------------- slice_langleyairbase_x7247_y2386.png
+Output/Harmonization/slice_langleyairbase_x7247_y2386/horRafale27_slice1.txt rafale
+Harmonization Command :  python harmonization.py --input_name slice_langleyairbase_x7247_y2386.png --ref_name horRafale27_slice1/horRafale27_slice_langleyairbase_x7247_y2386.png --harmonization 2
+Random Seed:  4216
+
+
 ## Test
 To test and generate the harmonized SyntAR images against all provided backgrounds and for all the aircraft patches , we have a script which is automated method to pick backgrounds one by one from the backgrounds folder , place objects one by one on the backgrounds where the user clicks on the background and generates the naively pasted aircraft images for the backgrounds inside "generated" folder. Then the scrip automatically runs the harmonization pipeline to create SyntAR images for all the generated images and save them inside "Output" folder.
 
