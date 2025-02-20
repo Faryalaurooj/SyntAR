@@ -2,12 +2,19 @@
 Synthetic data generation for Aircraft detection and recognition 
 
 # Code
+
+`git clone  https://github.com/Faryalaurooj/SyntAR.git
+`
+
 Create an environmnet and activate it
 
 `conda create -n hor python=3.9`
 
 
  `conda activate hor`
+
+`cd SyntAR`
+
 
 ## Install dependencies
 `python -m pip install -r requirements.txt`
